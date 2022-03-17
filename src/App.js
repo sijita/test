@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route index exact element={!credentials?.status ? <LoginHome /> : <Navigate to="/home" />} />
           <Route path="/home" element={credentials?.status ? <Home /> : <Navigate to="/" />} />
-          <Route path="/home/:product" element={credentials?.status ? <FullProducts /> : <Navigate to="/" />} />
+          <Route path="/home/:id/:product" element={credentials?.status ? <FullProducts /> : <Navigate to="/" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
   );

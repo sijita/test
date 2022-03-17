@@ -13,7 +13,7 @@ export default function ProductsCards({ product }) {
         {product.shortDescription}
       </div>
       <Link 
-        to={"/home" + product.path} 
+        to={`/home/${product.id}${product.path}`} 
         style={{color: '#FFF', textDecoration: 'none'}}
         className="mt-auto"
       >

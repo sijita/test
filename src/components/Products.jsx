@@ -10,7 +10,7 @@ export default function Products() {
   return (
     <>
       <div className='m-5' >
-        <h2 className='fw-bold text-light text-center' style={{fontSize: '3rem'}}>Products</h2>
+        <h2 className='fw-bold text-light text-center' style={{fontSize: '4rem'}}>Productos</h2>
       </div>
       <div className='p-5'>
         <ul className={styles.productsGrid}>

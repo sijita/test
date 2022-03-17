@@ -1,0 +1,21 @@
+.card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+.image {
+    background-color: #FFF;
+}
+
+.logo {
+    background: #FFF;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+@media (min-width: 1199.98px) { 
+    .paragrahp{
+        width: 60rem;
+    }
+}
