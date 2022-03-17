@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import LoginHome from "./pages/LoginHome";
+import NotFound from "./pages/NotFound";
+import UserContext from "./context/AuthContext";
+import { useContext } from "react";
+import FullProducts from "./pages/FullProducts";
 
 function App() {
+
+  const {credentials} = useContext(UserContext)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Routes>
+          <Route index exact element={!credentials?.status ? <LoginHome /> : <Navigate to="/home" />} />
+          <Route path="/home" element={credentials?.status ? <Home /> : <Navigate to="/" />} />
+          <Route path="/home/:product" element={credentials?.status ? <FullProducts /> : <Navigate to="/" />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
   );
 }
 

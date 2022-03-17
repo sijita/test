@@ -1,0 +1,27 @@
+.productsGrid {
+    padding: 0px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 330px);
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (min-width: 1500px) { 
+    .productsGrid {
+        grid-template-columns: repeat(auto-fill, 400px);
+    }
+ }
+
+@media (max-width: 991.98px) { 
+    .productsGrid {
+        grid-template-columns: repeat(auto-fill, 350px);
+    }
+ }
+
+ @media (max-width: 575.98px) { 
+    .productsGrid {
+        grid-template-columns: 100%;
+    }
+  }
