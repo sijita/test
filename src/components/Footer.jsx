@@ -17,13 +17,13 @@ export default function Footer() {
   return (
     <footer className="p-5 text-center" style={{background: '#0a0a0a'}}>
             <div className="d-flex flex-row justify-content-center align-items-center gap-5 mb-5">
-                <a href="https://web.facebook.com/HotelAmbeyma" target="_blank" rel="noreferrer">
+                <a href="/" rel="noreferrer">
                     <div><RiFacebookCircleFill className="fs-2" style={{color: '#FFF'}} /></div>
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=573115905930&text=Hola!." target="_blank" rel="noreferrer">
+                <a href="/" rel="noreferrer">
                     <div><RiWhatsappFill className="fs-2" style={{color: '#FFF'}} /></div>
                 </a>
-                <a href="https://www.instagram.com/hosteria_ambeyma/" target="_blank" rel="noreferrer">
+                <a href="/" rel="noreferrer">
                     <div><RiInstagramFill className="fs-2" style={{color: '#FFF'}} /></div>
                 </a>
             </div>
