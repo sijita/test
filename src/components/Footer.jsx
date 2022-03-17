@@ -15,7 +15,7 @@ export function FooterMenu({title, subtitle}) {
 
 export default function Footer() {
   return (
-    <footer className="p-5 text-center" style={{background: '#0a0a0a'}}>
+    <footer className="p-5 text-center mt-5" style={{background: '#0a0a0a'}}>
             <div className="d-flex flex-row justify-content-center align-items-center gap-5 mb-5">
                 <a href="/" rel="noreferrer">
                     <div><RiFacebookCircleFill className="fs-2" style={{color: '#FFF'}} /></div>
