@@ -7,16 +7,25 @@ import { useContext } from "react";
 import FullProducts from "./pages/FullProducts";
 
 function App() {
-
-  const {credentials} = useContext(UserContext)
+  const { credentials } = useContext(UserContext);
 
   return (
-        <Routes>
-          <Route index exact element={!credentials?.status ? <LoginHome /> : <Navigate to="/home" />} />
-          <Route path="/home" element={credentials?.status ? <Home /> : <Navigate to="/" />} />
-          <Route path="/home/:id/:product" element={credentials?.status ? <FullProducts /> : <Navigate to="/" />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+    <Routes>
+      <Route
+        index
+        exact
+        element={!credentials?.status ? <LoginHome /> : <Navigate to="/home" />}
+      />
+      <Route
+        path="/home"
+        element={credentials?.status ? <Home /> : <Navigate to="/" />}
+      />
+      <Route
+        path="/home/:id/:product"
+        element={credentials?.status ? <FullProducts /> : <Navigate to="/" />}
+      />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
